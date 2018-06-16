@@ -1,0 +1,9 @@
+ Git Commands
+ git init :-  It is just to initialize a repository.
+ git status:- It Shows the status of files in the current directory.
+ git add filename :- It add file changes to our index.
+ git commit -m "comment" :- It takes all the changes written to the index.
+ git log:- It list down the number of commits .
+ git config --global user.username" git username":- It just to set configuration values.
+ git config --global user.email"git email id" :- It is used to set email id details .
+
