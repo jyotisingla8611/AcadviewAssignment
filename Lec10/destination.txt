@@ -1,0 +1,5 @@
+Hello
+
+This is my source file.
+
+Here I am creating this file to copy this content to another file using input and output streams.
