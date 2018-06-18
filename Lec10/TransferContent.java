@@ -1,3 +1,5 @@
+/*Use the text file abc.txt and write its contents in another file xyz.txt. Print the contents of xyz.txt for 
+verification.*/
 package Lec10;
 import java.io.*;
 public class TransferContent {
@@ -13,16 +15,21 @@ public class TransferContent {
                 ch = fr.read();
             }
         }
-        catch(IOException e){
-            System.out.println(e.getMessage());
-        }
         finally{
             fr.close();
             fw.close();
             System.out.println("Complete");  
-
         }
-
-        
+        System.out.println("For Verification");
+        FileReader fr1 = new FileReader("destination.txt");
+        try{
+            int ch = fr1.read();
+            while(ch != -1){
+                System.out.print((char)ch);
+                ch = fr1.read();
+            }
+        }
+        finally{
+            fr1.close();}
 }
 }
