@@ -20,6 +20,19 @@ public class FileExplorer {
 				System.out.println(f2.getAbsolutePath());
 			}
 		}
+	    /*ArrayList<File> allFiles = new ArrayList<>();
+	    allFiles.add*/
+	}
+	public static void csv(String str) {
+		File f1=new File(str);
+		File[] listfiles = f1.listFiles();
+		for(File f2:listfiles)
+		{
+			if(f2.isFile())
+			{
+				System.out.println(f2.getName()+" , "+f2.getAbsolutePath());
+			}
+		}
 	}
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
@@ -28,7 +41,7 @@ public class FileExplorer {
         try {
 			f.createNewFile();
 		}finally{
-            System.out.println("File has been created");  
+            System.out.println("File has been created\n");  
         }
         String str,str1;
         System.out.println("Enter 2 paths");
@@ -37,7 +50,11 @@ public class FileExplorer {
         PrintStream pout=new PrintStream(f);    
         pout.println(str);
         pout.println(str1);
+        System.out.println("\nEnlisting all files and their paths\n");
         enlist1(str);
         enlist1(str1);
+        System.out.println("\nPrinting all files and their paths in csv Format we get :\n");
+        csv(str);
+        csv(str1);
 }
 }
