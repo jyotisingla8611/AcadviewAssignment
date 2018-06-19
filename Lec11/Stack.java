@@ -1,3 +1,5 @@
+/*Create a Dynamic Array Data Structure that performs all the actions of the ArrayList. It should create the
+new array of size 1.5 times the previous size.*/
 package Lec11;
 public class Stack {
 	private int arr[];
