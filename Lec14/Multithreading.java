@@ -3,9 +3,12 @@ package Lec14;
 
 public class Multithreading {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public static void main(String[] args)  {
+		Task task1=new Task();
+		Thread t1= new Thread(task1);
+		Thread t2= new Thread(task1);
+		t1.start();
+		t2.start();
 	}
 
 }
